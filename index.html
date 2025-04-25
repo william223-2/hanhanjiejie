@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+	<title>想你了，小涵老师 </title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url("digital-7_mono.ttf"/*tpa=./digital-7_mono.ttf*/) format("truetype");
+		}
+	</style>
+	<link href="css/default.css" tppabs="./css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js" tppabs="./js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js" tppabs="./js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js" tppabs="./js/functions.js"></script>
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">小涵老师：</span><br />
+				<span class="space"><span class="comments">听我说</span></span><br />
+				<span class="space"/><span class="comments">很高兴认识这么有趣的你，愿你在未来的日子里，所愿皆所成；愿我们在未来的岁月中，温柔相待</span><br />
+				<span class="space"/><span class="comments">有你的日子你就是一切，没你的日子一切都是你。小涵老师，我想告诉你，自从有了你，我觉得整个世界都都变得温柔，你那充满朝气的身影和活泼的话语总是伴着月光入我梦来，让我牵挂不停。</span><br />
+				<span class="space"/><span class="comments">小涵老师，一个人的一生总会遇到两个人，一个温柔了岁月，一个惊艳了时光，于我而言，恰好都是你！
+				</span><br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						小涵老师, 这是我们认识的第
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						永远陪你，forever！<br/>
+						<div class="signature">--想你的小文同学</div>
+
+				</div>
+			</div>
+</div>
+		<div class="bg1">	
+		<div class="main">
+			<footer style="line-height:20px">
+                <div id="copyright">
+                  <p><a href='http://51bbw.cn' target="_blank"></a> 
+                    <a href="http://ymjzy.net" target="_blank"></a>
+                    <a href="" target="_blank"></a></p>
+                </div>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2025, 2, 2);  // 月份从0开始计算，2表示3月
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "提醒您：您的浏览器版本过旧^_^<br/>" +
+		"推荐使用 <a href='https://www.microsoft.com/zh-cn/edge/download' target='_blank'>Bing 浏览器<br/>请先升级您的浏览器，效果很炫哦~~";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none");
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		adjustWordsPosition();
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+	</script>
+    <audio id="bgmMusic" src="bgm.mp3" preload="auto" type="audio/mp3" autoplay loop></audio>
+
+</body>
+</html>
